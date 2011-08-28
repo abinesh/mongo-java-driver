@@ -24,7 +24,6 @@ class XBasicDBObjectTest extends FunSuite with ShouldMatchers {
   //  public void testBuilderIsEmpty() {
   test("test builder is empty") {
     val b = XBasicDBObjectBuilder.start();
-    assert(b.isEmpty);
     b.isEmpty should be(true)
     b.append("a", anyRef(1))
     b.isEmpty should be(false)
@@ -49,11 +48,9 @@ class XBasicDBObjectTest extends FunSuite with ShouldMatchers {
     b.push("z");
     b.append("b", anyRef(3));
 
-
     val x = b.get;
     val y = JSON.parse("{ 'x' : 1 , 'y' : { 'a' : 2 } , 'z' : { 'b' : 3 } }");
 
-    assert(x.equals(y));
     x should be(y)
   }
 
