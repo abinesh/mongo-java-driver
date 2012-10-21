@@ -38,5 +38,3 @@
 * Jim Dickinson        jdickinson@shopwiki.com
 * Jorge Ortiz          jorge.ortiz@gmail.com
 * Ryan Nitz
-
-
